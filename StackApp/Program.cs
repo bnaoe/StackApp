@@ -36,6 +36,7 @@ namespace StackApp
         public StackableEvenNumbers(Sum sum)
         {
             _sum = sum;
+            Console.WriteLine("Start Even stack program using inheritance & composition...");
         }
 
         public void AddToStack(int num)
