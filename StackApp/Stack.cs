@@ -7,10 +7,11 @@ namespace StackApp
     {
         
         private List<object> _list = new List<object>();
-        private object PopObject;
+        private object _popObject;
 
         public List<object> StackList{ get => _list;}
         
+
         public void Push(object obj)
         {
             if (obj != null) _list.Add(obj);
@@ -21,10 +22,10 @@ namespace StackApp
         {
             if (_list.Count != 0)
             {
-                PopObject = _list[_list.Count - 1];
-                _list.Remove(PopObject);
+                _popObject = _list[_list.Count - 1];
+                _list.Remove(_popObject);
 
-                return PopObject;
+                return _popObject;
             }
             else
             {
